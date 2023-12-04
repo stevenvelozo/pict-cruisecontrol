@@ -1,0 +1,79 @@
+{
+	"Name": "Bookstore",
+	"Description": "Retold bookstore test suite.",
+	"Site": "Retold Bookstore",
+	"URL": "http://localhost:8086/index.html",
+	"Criteria": [
+		{
+			"Expectation": "Require",
+			"Address": "title",
+			"Comparison": "contains",
+			"ValueType": "static string",
+			"Value": "Retold Bookstore"
+		}
+	],
+	"Locations": [
+		{
+			"Name": "Book List",
+			"Description": "The list of books in the bookstore.",
+			"GUIDLocation": "Book_List",
+			"Criteria": [
+				{
+					"Expectation": "Require",
+					"Address": "title",
+					"Comparison": "ends with",
+					"ValueType": "static string",
+					"Value": "- Book List"
+				},
+				{
+					"Expectation": "Require",
+					"Address": "#BookList_Container",
+					"Comparison": "dom element exists"
+				},
+				{
+					"Expectation": "Maybe",
+					"Address": "BookList_Header",
+					"Comparison": "contains",
+					"ValueType": "manifest address",
+					"Value": "AppData.UserName"
+				}
+			]
+		}
+	],
+	"NavigationRoutes": {
+		"Home": {
+			"Type": "URL",
+			"URL": "http://localhost:8086/index.html"
+		},
+		"BookList": {
+			"Type": "HashURL",
+			"URL": "#BookList"
+		},
+		"Book": {
+			"Type": "Click",
+			"Address": "#BookList_Container"
+		}
+	},
+	"Actions": {
+		"Read_Book": {
+			"Type": "RecordMarshall",
+			"Schema": "Book"
+		}
+	},
+	"Schemas": {
+		"Book": {
+			"Scope": "Archive.org",
+			"Descriptors": {
+				"Title": {
+					"Hash": "Title",
+					"Name": "Title",
+					"Description": "The title of the book.",
+					"DataType": "String",
+
+					"Location": "Book_Display",
+					"PageAddress": "#Book_Display h1"
+				}
+			}
+		}
+	}
+}
