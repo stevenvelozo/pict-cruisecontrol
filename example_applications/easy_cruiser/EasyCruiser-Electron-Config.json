@@ -1,0 +1,21 @@
+{
+	"Product": "EasyCruiser",
+
+	"LogStreams":
+		[
+			{
+				"outputloglinestoconsole": true,
+				"showtimestamps": true,
+				"formattedtimestamps": true,
+				"loggertype": "simpleflatfile",
+				"path": "./EasyCruiser.log"
+			}
+		],
+
+	"ElectronDevToolsEnabled": true,
+	"LoadDevToolsOnInitialization": true,
+
+	"ConfigFile": "~/EasyCruiser.json",
+
+	"Starting_Site_URL": "https://250kb.club/"
+}
