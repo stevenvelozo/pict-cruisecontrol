@@ -1,6 +1,6 @@
 {
     "name": "pict-cruisecontrol",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Automated and user-assisted web page navigation and data marshaling.",
     "main": "source/Pict-CruiseControl-Feature.js",
     "scripts": {
@@ -43,6 +43,6 @@
         "quackage": "^1.0.25"
     },
     "dependencies": {
-        "pict-view": "^1.0.37"
+        "pict-view": "^1.0.67"
     }
 }
