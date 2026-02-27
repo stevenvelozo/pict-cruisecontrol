@@ -40,7 +40,7 @@
     },
     "devDependencies": {
         "pict": "^1.0.152",
-        "quackage": "^1.0.25"
+        "quackage": "^1.0.59"
     },
     "dependencies": {
         "pict-view": "^1.0.67"
